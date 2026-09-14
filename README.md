@@ -1,10 +1,13 @@
 # Morphology-only baselines for histology-based spatial transcriptomics prediction
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22741890.svg)](https://doi.org/10.5281/zenodo.22741890)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Code and intermediate results accompanying:
 
 > Chenming Li. Morphology-only baselines are missing from tissue-domain
 > evaluations of histology-based spatial transcriptomics prediction.
-> bioRxiv (2026). doi: 
+> bioRxiv (2026). doi: [added once the preprint is posted]
 
 ## What this repository shows
 
@@ -55,10 +58,12 @@ Scripts are in `scripts/`; run them from the repository root in this order.
 | `exp_nonmorph_ref.py` | `nonmorph_reference.csv` | Fig. 3a |
 | `exp_d1d2.py` | `d2_variance.csv`, `d1d2_per_method.csv` | Fig. 3b,c |
 | `exp_alpha.py`, `exp_rankmatch.py`, `exp_permnull.py` | mechanism analysis | Discussion |
-| `make_figure.py` | `figure_main.png` | Fig. 1 |
+| `make_figures.py` | `figures/Fig1-3.pdf` and `.png` | Figs. 1–3 |
+| `make_ed_figures.py` | `figures/ED_Fig1-4.pdf` and `.png` | Extended Data Figs. 1–4 |
 
-All outputs are provided in `results/`, so figures can be regenerated
-without re-running feature extraction.
+All outputs are provided in `results/` (including `Supplementary_Table_1.csv`), and publication figures (180 mm
+double-column, vector PDF + 600 dpi PNG) in `figures/`, so figures can be
+regenerated without re-running feature extraction.
 
 Feature extraction for eight sections takes about five minutes on an M3
 MacBook; all downstream analyses are CPU-only and finish within an hour.
@@ -75,13 +80,17 @@ MacBook; all downstream analyses are CPU-only and finish within an hour.
 
 ## Citation
 
+This code is archived at [10.5281/zenodo.22741890](https://doi.org/10.5281/zenodo.22741890).
+The DOI above always resolves to the latest archived release; version-specific
+DOIs are listed on the Zenodo record.
+
 ```bibtex
 @article{li2026morphology,
   title   = {Morphology-only baselines are missing from tissue-domain evaluations of histology-based spatial transcriptomics prediction},
   author  = {Chenming Li},
   journal = {bioRxiv},
   year    = {2026},
-  doi     = {[TO ADD]}
+  doi     = {}
 }
 ```
 
