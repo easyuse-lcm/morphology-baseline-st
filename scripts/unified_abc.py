@@ -64,6 +64,7 @@ def load_real_expr(root, sample, genes):
     cp = next(root.glob(f"data/ST-cnts/{sample}.tsv.gz"))
     with gzip.open(cp,"rt") as f:
         cnt = pd.read_csv(f, sep="\t", index_col=0)
+    cnt = cnt.rename(columns={c: c.replace("-", ".") for c in cnt.columns})  # match R-mangled names
     keep = [g for g in genes if g in cnt.columns]
     X = cnt[keep].to_numpy(float)
     lib = X.sum(1, keepdims=True); lib[lib==0]=1

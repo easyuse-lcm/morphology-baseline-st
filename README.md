@@ -22,6 +22,12 @@ dataset, that baseline (mean ARI 0.245) outperforms all eleven methods
 benchmarked by Wang et al. (Nat Commun 2025; mean ARI 0.126). No model was
 re-trained; all predictions are taken from the authors' public Zenodo archive.
 
+![Main result](figures/png/Fig1.png)
+
+**A**, the three paths compared, all sharing one clustering protocol.
+**B**, ARI against pathologist annotation for each section. **C**, every
+published method against the baseline, with paired *P* values (n = 8).
+
 ## Setup
 
 Python 3.11. Tested on macOS (Apple Silicon, MPS) and Linux (CPU).
@@ -61,9 +67,13 @@ Scripts are in `scripts/`; run them from the repository root in this order.
 | `make_figures.py` | `figures/Fig1-3.pdf` and `.png` | Figs. 1–3 |
 | `make_ed_figures.py` | `figures/ED_Fig1-4.pdf` and `.png` | Extended Data Figs. 1–4 |
 
-All outputs are provided in `results/` (including `Supplementary_Table_1.csv`), and publication figures (180 mm
-double-column, vector PDF + 600 dpi PNG) in `figures/`, so figures can be
-regenerated without re-running feature extraction.
+All outputs are provided in `results/` (including `Supplementary_Table_1.csv`),
+so figures can be regenerated without re-running feature extraction.
+
+Figures are written to `figures/` in two formats, both 180 mm double-column
+and typeset to Nature Portfolio specification: `figures/pdf/` holds the vector
+versions used for submission, and `figures/png/` the 600 dpi rasters used for
+on-screen preview and for this README.
 
 Feature extraction for eight sections takes about five minutes on an M3
 MacBook; all downstream analyses are CPU-only and finish within an hour.
