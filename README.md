@@ -4,7 +4,7 @@ Code and intermediate results accompanying:
 
 > Chenming Li. Morphology-only baselines are missing from tissue-domain
 > evaluations of histology-based spatial transcriptomics prediction.
-> bioRxiv (2026). doi: [TO ADD]
+> bioRxiv (2026). doi: 
 
 ## What this repository shows
 
